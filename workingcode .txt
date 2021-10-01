@@ -1,0 +1,66 @@
+ CookieContainer _cookieJar = new CookieContainer();
+            var client = new RestClient("https://127.0.0.1:80");
+            client.CookieContainer = _cookieJar;
+            client.Authenticator = new HttpBasicAuthenticator("Default User", "robotics");
+            var request = new RestRequest("/users/rmmp", Method.POST);
+            request.AddHeader("accept", "application/json");
+            request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+            var body = @"privilege=modify";
+            request.AddParameter("application/x-www-form-urlencoded;v=2.0", body, ParameterType.RequestBody);
+            System.Net.ServicePointManager.ServerCertificateValidationCallback = (s, ce, ca, p) => true;
+
+            var response = client.Execute(request);
+
+            Thread.Sleep(4000);
+
+            var request2 = new RestRequest("/rw/mastership/request", Method.POST);
+            request2.AddHeader("Accept", "application/json");
+            request2.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+            var response2 = client.Execute(request2);
+
+            Console.WriteLine(response2.Content + "\n");
+
+            Thread.Sleep(2000);
+
+            var request3 = new RestRequest("/users/register/local",Method.POST);
+            request3.AddHeader("Accept", "application/hal+json;v=2.0");
+            request3.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+            request3.AddParameter("username", "Default User");
+            request3.AddParameter("application", "RobAPI2-Client");
+            request3.AddParameter("location", "local");
+            request3.AddParameter("local-key", "12345678");
+
+
+            var response3 = client.Execute(request3);
+
+            Console.WriteLine("Here is your response: \n" + response3.Content);
+
+            Thread.Sleep(2000);
+
+
+            var request4 = new RestRequest("rw/motionsystem/ROB_1", Method.POST);
+            request4.AddHeader("Accept", "application/json");
+            request4.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+
+
+            var response4 = client.Execute(request4);
+
+            Console.WriteLine("Here is your response: \n" + response4.Content);
+
+            Thread.Sleep(2000);
+
+            var request5 = new RestRequest("/rw/motionsystem/jog",Method.POST);
+            request5.AddHeader("Accept", "application/json");
+            request5.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+            request5.AddParameter("axis1", "0");
+            request5.AddParameter("axis2", "900");
+            request5.AddParameter("axis3", "0");
+            request5.AddParameter("axis4", "0");
+            request5.AddParameter("axis5", "0");
+            request5.AddParameter("axis6", "0");
+            request5.AddParameter("ccount", "2");
+            request5.AddParameter("inc-mode ", "Large");
+
+            var response5 = client.Execute(request5);
+
+            Console.WriteLine("Here is your response: \n" + response5.Content);
