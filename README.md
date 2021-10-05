@@ -25,7 +25,7 @@ This repository stores the connectRobot library, which will be implemented withi
      string port = "80";
   
      string mechanism = "ROB_1";
-  
-     connectRobot myobj = new connectRobot(ipadress,port,mechanism);
+     
+     sendCommand myobj = new sendCommand(ipaddress, port, mechanism);
   
 The preceding code initializes the robot controller's ip adress and port information. It also initializes the connection between the robot controller and the Unity projejct. Ensure that before you run this code, that the ip adress and port numbers are correct. Also, make sure that your Robot Controller is on and that the FlexPendant is placed in manual mode with the "Motors ON". Make sure to grant RMMP access within 5 seconds of starting code. 
