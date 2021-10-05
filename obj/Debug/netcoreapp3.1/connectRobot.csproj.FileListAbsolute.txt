@@ -8,3 +8,13 @@ C:\Users\Gabriella\Documents\Job\connectRobot\obj\Debug\netcoreapp3.1\connectRob
 C:\Users\Gabriella\Documents\Job\connectRobot\obj\Debug\netcoreapp3.1\connectRobot.csproj.CoreCompileInputs.cache
 C:\Users\Gabriella\Documents\Job\connectRobot\obj\Debug\netcoreapp3.1\connectRobot.dll
 C:\Users\Gabriella\Documents\Job\connectRobot\obj\Debug\netcoreapp3.1\connectRobot.pdb
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\bin\Debug\netcoreapp3.1\connectRobot.deps.json
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\bin\Debug\netcoreapp3.1\connectRobot.dll
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\bin\Debug\netcoreapp3.1\connectRobot.pdb
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.csproj.AssemblyReference.cache
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.AssemblyInfoInputs.cache
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.AssemblyInfo.cs
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.csproj.CoreCompileInputs.cache
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.dll
+C:\Users\grazianige\Documents\GitHub\connect-robot-library\obj\Debug\netcoreapp3.1\connectRobot.pdb

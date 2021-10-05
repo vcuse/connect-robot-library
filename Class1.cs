@@ -120,7 +120,7 @@ namespace connectRobot
 
 
         }
-        public void jog(int amount)
+        public void jog(string direction)
         {  /*
              Description: 
                    This function jogs robot according to a given input...still be  
@@ -135,12 +135,37 @@ namespace connectRobot
             //given an instruction
             //move robot in specific motion 
 
-            for (int i = 0; i < amount; i++)
+            //if (direction == right)
+            //{
+
+
+            while(direction == "right")
             {
                 var request = new RestRequest("/rw/motionsystem/jog", Method.POST);
                 request.AddHeader("Accept", "application/json");
                 request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
                 request.AddParameter("axis1", "900");
+                request.AddParameter("axis2", "0");
+                request.AddParameter("axis3", "0");
+                request.AddParameter("axis4", "0");
+                request.AddParameter("axis5", "0");
+                request.AddParameter("axis6", "0");
+                request.AddParameter("ccount", "2");
+                request.AddParameter("inc-mode ", "None");
+
+                var response = client.Execute(request);
+
+                Console.WriteLine("Here is your response: \n" + response.Content);
+
+                Thread.Sleep(500);
+
+            }
+            while (direction == "left")
+            {
+                var request = new RestRequest("/rw/motionsystem/jog", Method.POST);
+                request.AddHeader("Accept", "application/json");
+                request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+                request.AddParameter("axis1", "-900");
                 request.AddParameter("axis2", "0");
                 request.AddParameter("axis3", "0");
                 request.AddParameter("axis4", "0");
