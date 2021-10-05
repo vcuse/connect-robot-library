@@ -13,9 +13,9 @@ This repository stores the connectRobot library, which will be implemented withi
 
 **In order to attach and execute the library in a Unity project:**
 1. Install NuGetForUnity package into your Unity project using the following link: https://github.com/GlitchEnzo/NuGetForUnity/releases
-2. Using the new NuGet tab above, install the RestSharp package into your project. 
+2. Using the new NuGet tab that was installed in the Unity toolbar at the top of the screen, install the RestSharp package into your project. 
 3. Copy and paste the connectRobot.dll file into your asset folder in Unity.
-4. Within the C# Unity Script that you would like to utilize the connectRobot library, type "using connectRobot" at the top of the script.
+4. Within the Unity C# Script where you would like to utilize the connectRobot library, type "using connectRobot" at the top of the script.
 
 
 *Implement the following code into the void Start() function of Unity:*
