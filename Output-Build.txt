@@ -1,2 +1,4 @@
 ﻿Build started...
-========== Build: 0 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
+1>------ Build started: Project: connectRobot, Configuration: Debug Any CPU ------
+1>connectRobot -> C:\Users\grazianige\Documents\GitHub\connect-robot-library\bin\Debug\netcoreapp3.1\connectRobot.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
