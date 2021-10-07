@@ -178,14 +178,14 @@ namespace connectRobot
                 Thread.Sleep(500);
 
             }
-            else if (direction == "left")
+            else if (direction == "forward")
             {
                 var request = new RestRequest("/rw/motionsystem/jog", Method.POST);
                 request.AddHeader("Accept", "application/json");
                 request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
-                request.AddParameter("axis1", "-900");
-                request.AddParameter("axis2", "0");
-                request.AddParameter("axis3", "0");
+                request.AddParameter("axis1", "0");
+                request.AddParameter("axis2", "900");
+                request.AddParameter("axis3", "-900");
                 request.AddParameter("axis4", "0");
                 request.AddParameter("axis5", "0");
                 request.AddParameter("axis6", "0");
@@ -199,14 +199,14 @@ namespace connectRobot
                 Thread.Sleep(500);
 
             }
-            else if (direction == "left")
+            else if (direction == "back")
             {
                 var request = new RestRequest("/rw/motionsystem/jog", Method.POST);
                 request.AddHeader("Accept", "application/json");
                 request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
-                request.AddParameter("axis1", "-900");
-                request.AddParameter("axis2", "0");
-                request.AddParameter("axis3", "0");
+                request.AddParameter("axis1", "0");
+                request.AddParameter("axis2", "-900");
+                request.AddParameter("axis3", "900");
                 request.AddParameter("axis4", "0");
                 request.AddParameter("axis5", "0");
                 request.AddParameter("axis6", "0");
