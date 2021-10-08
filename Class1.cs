@@ -220,6 +220,48 @@ namespace connectRobot
                 Thread.Sleep(500);
 
             }
+            else if (direction == "up")
+            {
+                var request = new RestRequest("/rw/motionsystem/jog", Method.POST);
+                request.AddHeader("Accept", "application/json");
+                request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+                request.AddParameter("axis1", "0");
+                request.AddParameter("axis2", "-900");
+                request.AddParameter("axis3", "0");
+                request.AddParameter("axis4", "0");
+                request.AddParameter("axis5", "0");
+                request.AddParameter("axis6", "0");
+                request.AddParameter("ccount", "0");
+                request.AddParameter("inc-mode ", "None");
+
+                var response = client.Execute(request);
+
+                Console.WriteLine("Here is your response: \n" + response.Content);
+
+                Thread.Sleep(500);
+
+            }
+            else if (direction == "down")
+            {
+                var request = new RestRequest("/rw/motionsystem/jog", Method.POST);
+                request.AddHeader("Accept", "application/json");
+                request.AddHeader("Content-Type", "application/x-www-form-urlencoded;v=2.0");
+                request.AddParameter("axis1", "0");
+                request.AddParameter("axis2", "900");
+                request.AddParameter("axis3", "0");
+                request.AddParameter("axis4", "0");
+                request.AddParameter("axis5", "0");
+                request.AddParameter("axis6", "0");
+                request.AddParameter("ccount", "0");
+                request.AddParameter("inc-mode ", "None");
+
+                var response = client.Execute(request);
+
+                Console.WriteLine("Here is your response: \n" + response.Content);
+
+                Thread.Sleep(500);
+
+            }
             else
             {
                 Console.WriteLine("Right or Left");
